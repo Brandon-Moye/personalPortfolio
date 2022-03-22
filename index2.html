@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style2.css" />
     <title>Brandon Moye</title>
-    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="heroContainer">
@@ -61,5 +63,39 @@
         
       -->
     </section>
+    <!--                -->
+    <!--PROJECTS SECTION-->
+    <!--                -->
+    <section class="projectsSection">
+        <div0 class="project1Container">
+            <div id="imageContainer" class="imageContainer" >
+              <img id="project1Image" class="project1Image" src="#" alt="">
+              <div class="linkContainer">
+                <a class="project1LinkToGithub" href="#">
+                  <ion-icon id="githubLogo" class="githubLogo" name="logo-github"></ion-icon>
+                </a>
+                <a class="project1LinkToLive" href="#">
+                  <ion-icon class="globeLogo" name="globe"></ion-icon>                
+                </a>
+              </div>
+            </div>
+            <div class="project1Description">
+              <h3>Project 1</h3>
+              <br>
+              <span class="project1BodyText">
+                This is a hangman game that allows players to input a letter via keyboard.
+                All of the words are a favorite thing of mine to help the player get to know me!
+                <br> - A correct guess will be displayed in the blank boxes
+                <br> - An incorrect guess will generate a line in the picture box
+                <br> - Once a player guesses all the correct letters it will prompt for them to play again
+                <br> - A player can reload to generate a new word if they feel it is a repeat
+                <br> - Every potential word has a category to help the player
+              </span>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="script.js"></script>
   </body>
 </html>
