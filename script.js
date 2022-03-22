@@ -1,50 +1,14 @@
 "use strict";
 
-//
-// --------------------------------------------------------------------------------------
-// THIS CODE STOPS THE WEBPAGE FROM SCROLLING
-// --------------------------------------------------------------------------------------
-//
-// var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
+// document.getElementById("imageContainer").addEventListener("mouseover", function() {
+//     console.log("this is clicked");
+// })
 
-// function preventDefault(e) {
-//   e.preventDefault();
-// }
+document.querySelector(".imageContainer").addEventListener("mouseover", function () {
+      document.getElementById("githubLogo").classList.add("githubLogo2");
+    });
 
-// function preventDefaultForScrollKeys(e) {
-//   if (keys[e.keyCode]) {
-//     preventDefault(e);
-//     return false;
-//   }
-// }
-
-// // modern Chrome requires { passive: false } when adding event
-// var supportsPassive = false;
-// try {
-//   window.addEventListener(
-//     "test",
-//     null,
-//     Object.defineProperty({}, "passive", {
-//       get: function () {
-//         supportsPassive = true;
-//       },
-//     })
-//   );
-// } catch (e) {}
-
-// var wheelOpt = supportsPassive ? { passive: false } : false;
-// var wheelEvent =
-//   "onwheel" in document.createElement("div") ? "wheel" : "mousewheel";
-
-// // call this to Disable
-// function disableScroll() {
-//   window.addEventListener("DOMMouseScroll", preventDefault, false); // older FF
-//   window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-//   window.addEventListener("touchmove", preventDefault, wheelOpt); // mobile
-//   window.addEventListener("keydown", preventDefaultForScrollKeys, false);
-// }
-
-// disableScroll();
-
-// --------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------
+    document.querySelector(".project1Description").addEventListener("mouseover", function () {
+        document.getElementById("githubLogo").classList.remove("githubLogo2");
+      });
+  
