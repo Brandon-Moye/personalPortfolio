@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  font-family: 'Merriweather', serif;;
+  font-family: "Merriweather", serif;
 }
 
 /* ---------------------------------------------- */
@@ -203,142 +203,89 @@ body {
 /* ---------------------------------------------- */
 .projectsSection {
   margin: 0 auto;
-  /* display: grid;
-  grid-template-columns: 1fr 3fr; */
+  display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
   background: blue;
 }
 
 .project1Container {
-  /* margin: 0 auto; */
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr;
   width: 120rem;
   height: 30rem;
   /* padding: 2rem; */
-  border: 1px solid white;
+  border: 3px solid white;
+  border-radius: 30px;
+  margin-bottom: 10rem;
 }
 
 /* ---------------------------------------------- */
 /* PROJECTS IMAGE SECTION */
 /* ---------------------------------------------- */
 
-.imageContainer {
-  position: relative;
-}
-
-.project1Image {
-  position: absolute;
-}
-
-
 .linkContainer {
   /* position: absolute; */
   bottom: 1rem;
   left: 1rem;
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 22rem;
+  /* justify-content: space-between; */
+  align-items: center;
+  color: lightblue;
+  margin-top: 1.5rem;
 }
 
-/* .project1LinkToLive {
-  width: 5rem;
-  height: 5rem;
-  background: yellow;
+.project1LinkToGithub {
+  margin-right: 10rem;
+  margin-left: 3rem;
+}
+
+/* .projectLink:after {
+  content: " \2192";
+  color: lightblue;
 } */
 
-
-
-.githubLogo {
-  width: 5rem;
-  height: 5rem;
-  stroke-width: 0rem;
-  stroke: transparent;
-  fill: transparent;
+.projectLink:link,
+.projectLink:visited {
+  color: lightblue;
+  text-decoration: none;
+  transition: all ease-in-out 0.5s;
+  border-bottom: 1px solid transparent;
 }
 
-.githubLogo2 {
-  width: 5rem;
-  height: 5rem;
-  stroke-width: 1rem;
-  stroke: black;
-  fill: yellow;
-}
-
-
-.globeLogo {
-  width: 5rem;
-  height: 5rem;
-  stroke-width: 0rem;
-  stroke: transparent;
-  fill: transparent;
-}
-
-.project1LinkToGithub:link, .project1LinkToLive:link {
-  width: 5rem;
-  height: 5rem;
-  background: none;
-  z-index: 1; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* need the z index for some reason to put the div in front of the image */
-
+.projectLink:hover,
+.projectLink:active {
+  color: darkorange;
+  border-color: darkorange; /* content: "\2192"; */
 }
 
 .project1Image {
-  border-right: 1px solid white;
+  /* border-right: 1px solid white; */
   width: 30rem;
-  height: 30rem;
+  height: 29.4rem;
+  object-fit: cover;
+  border-radius: 30px;
+  /* border-right: 1px solid white; */
 }
 
 /* ---------------------------------------------- */
 /* PROJECTS IMAGE ANIMATION SECTION */
 /* ---------------------------------------------- */
 
-/* .project1Image:hover {
-  width: 30rem;
-  height: 30rem;
-  background: linear-gradient(to bottom, rgba(241, 241, 241, 0), rgba(10, 7, 7, 0.836));
-  border-right: 1px solid white;
-  transition: transform 3s;
-} */
-
-.project1LinkToGithub:visited, .project1LinkToLive:visited {
-  width: 5rem;
-  height: 5rem;
-  background: yellow;
-  /* z-index: 10; */
-
-}
-
-.project1LinkToGithub:hover, .project1LinkToLive:hover {
-  width: 5rem;
-  height: 5rem;
-  background: red;
-  cursor: pointer;
-  /* z-index: 5; */
-}
-
-.githubLogo:hover, .globeLogo:hover {
-  fill: black; 
-}
-
-/* .globeLogo:hover {
-  fill: pink;
-  stroke: blue;
-  outline: yellow;
-} */
-
 /* ---------------------------------------------- */
 /* PROJECTS DESCRIPTION SECTION */
 /* ---------------------------------------------- */
 
+.project1Description {
+  padding: 2rem;
+}
+
 h3 {
   font-size: 2.5rem;
-  color: lightblue;
+  color: white;
   font-weight: bold;
 }
 
@@ -347,8 +294,5 @@ h3 {
   font-size: 2rem;
   grid-row: 1;
   grid-column: 2;
-  width: 90rem;
-  height: 30rem;
   grid-column: 2;
 }
-
