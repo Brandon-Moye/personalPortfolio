@@ -4,243 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
     <link rel="stylesheet" href="style.css" />
-    <title>Brandon Moye</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
-    <header id="header" class="header headerOrangeBuffer">
-      <nav class="allNavContainer">
-        <div
-          id="landingScreenButtonContainer"
-          class="landingScreenButtonContainer"
-        >
-          <a class="navButton landingScreenButton" href="#aboutSection"
-            >Brandon Moye</a
-          >
-        </div>
-        <div class="otherButtonContainer">
-          <a class="navButton projectsButton" href="#projectsSection"
-            >Projects</a
-          >
-          <a class="navButton resumeButton" href="#resumeSection">Resume</a>
-          <a class="navButton contactButton" href="#contactSection">Contact</a>
-        </div>
-      </nav>
-    </header>
-    <div id="aboutSection" class="heroContainer">
-      <section id="LHS" class="LHS">
-        <p class="hello">Hello,</p>
-        <p class="intro">my name is</p>
-        <p class="name">
-          Brandon<br />
-          Moye
-        </p>
-      </section>
-      <nav id="background-change" class="RHS">
-        <!-- <a class="link about" href="#">About</a>
-
-        <a
-          id="background-trigger"
-          class="link projects"
-          href="/ProjectsPage/projectsIndex.html"
-          >Projects</a
-        >
-        <a class="link resume" href="#">Resume</a> -->
-      </nav>
+    <!-- <div id="letterContainer" class="letterContainer">
+      <div class="letterBlanks">Blanks1</div>
+    </div> -->
+    <!-- <h1 class="title">Hangman</h1> -->
+    <a class="returnToSite" href="#">Return To Site</a>
+    <div class="gameContainer">
+      <div id="hangmanContainer" class="hangmanContainer">
+        <div id="platform" class="hidden platform"></div>
+        <div id="post" class="hidden post"></div>
+        <div id="rope" class="hidden rope"></div>
+        <div id="head" class="hidden head"></div>
+        <div id="body" class="hidden body"></div>
+        <div id="leftArm" class="hidden leftArm"></div>
+        <div id="rightArm" class="hidden rightArm"></div>
+        <div id="leftLeg" class="hidden leftLeg"></div>
+        <div id="rightLeg" class="hidden rightLeg"></div>
+      </div>
+      <table id="visibleCells"></table>
+      <div class="reloadAndHintContainer">
+        <button class="reload" type="button">Reload</button>
+        <div id="hint"></div>
+      </div>
+      <form
+        class="form"
+        autocomplete="off"
+        onsubmit="guessingLetters(); return false"
+      >
+        <input id="letter" type="text" />
+        <button id="submit" class="submit" type="submit">Guess</button>
+      </form>
+      <h2 class="incorrectLettersTitle">Incorrect Letters</h2>
+      <div id="wrongGuessContainer"></div>
+      <div id="finalMessage"></div>
+      <button id="reset" class="hidden reset">Play Again</button>
     </div>
-
-    <!--                -->
-    <!--PROJECTS SECTION-->
-    <!--                -->
-    <section id="projectsSection" class="projectsSection">
-      <h3 class="projectsSectionTitle">Projects</h3>
-      <div class="projectContainer projectContainer--hangman">
-        <div id="imageContainer" class="imageContainer">
-          <img
-            id="projectImage"
-            class="projectImage"
-            src="img/DF673D1D-CD37-46AF-B2BF-062DC27D973A_1_201_a.jpeg"
-            alt=""
-          />
-        </div>
-        <div class="projectDescription">
-          <h3>Hangman</h3>
-          <br />
-          <span class="projectBodyText">
-            This is a hangman game that allows players to input a letter via
-            keyboard. All of the words are a favorite thing of mine to help the
-            player get to know me!
-            <br />
-            - A correct guess will be displayed in the blank boxes <br />
-            - An incorrect guess will generate a line in the picture box <br />
-            - Once a player guesses all the correct letters it will prompt for
-            them to play again <br />
-            - A player can reload to generate a new word if they feel it is a
-            repeat <br />
-            - Every potential word has a category to help the player
-            <div class="linkContainer">
-              <a class="projectLink projectLinkToGithub" href="#"
-                >See in Github &rarr;</a
-              >
-              <a class="projectLink projectLinkToLive" href="#"
-                >See Live &rarr;</a
-              >
-            </div>
-          </span>
-        </div>
-      </div>
-      <div class="projectContainer">
-        <div id="imageContainer" class="imageContainer">
-          <img
-            id="projectImage"
-            class="projectImage"
-            src="img/DF673D1D-CD37-46AF-B2BF-062DC27D973A_1_201_a.jpeg"
-            alt=""
-          />
-        </div>
-        <div class="projectDescription">
-          <h3>Tic-Tac-Toe</h3>
-          <br />
-          <span class="projectBodyText">
-            This is a two player tic-tac-toe game
-            <br />
-            - Players will click on a cell to put down their game piece <br />
-            - Once a cell has been clicked it is set for that game and can't be
-            changed <br />
-            - The code checks for all potential win patterns to determine a win
-            <br />
-            - The game will display a winner screen with who won and prompt the
-            players to play again <br />
-            - If there is a tie the game will notify the players that no one won
-            <div class="linkContainer">
-              <a class="projectLink projectLinkToGithub" href="#"
-                >See in Github &rarr;</a
-              >
-              <a class="projectLink projectLinkToLive" href="#"
-                >See Live &rarr;</a
-              >
-            </div>
-          </span>
-        </div>
-      </div>
-
-      <div class="projectContainer">
-        <div id="imageContainer" class="imageContainer">
-          <img
-            id="projectImage"
-            class="projectImage"
-            src="img/DF673D1D-CD37-46AF-B2BF-062DC27D973A_1_201_a.jpeg"
-            alt=""
-          />
-        </div>
-        <div class="projectDescription">
-          <h3>Case Study: Omnifood</h3>
-          <br />
-          <span class="projectBodyText">
-            A website focused on design and user experience
-            <br />
-            - This was a project for a Udemy course I completed<br />
-            - I learned the fundamentals of design and popular design styles
-            <br />
-            - The code checks for all potential win patterns to determine a win
-            <br />
-            - The page contains multiple types of design layouts <br />
-            - There is a working contact form where I can view messages people
-            have sent
-            <div class="linkContainer">
-              <a class="projectLink projectLinkToGithub" href="#"
-                >See in Github &rarr;</a
-              >
-              <a class="projectLink projectLinkToLive" href="#"
-                >See Live &rarr;</a
-              >
-            </div>
-          </span>
-        </div>
-      </div>
-      <div class="projectContainer proejctContainer--carousel">
-        <div id="imageContainer" class="imageContainer">
-          <img
-            id="projectImage"
-            class="projectImage"
-            src="img/DF673D1D-CD37-46AF-B2BF-062DC27D973A_1_201_a.jpeg"
-            alt=""
-          />
-        </div>
-        <div class="projectDescription">
-          <h3>Carousel</h3>
-          <br />
-          <span class="projectBodyText">
-            A shell for an e-commorce like product photo display
-            <br />
-            - This heavily uses JavaScript and CSS to create hover effects<br />
-            - When a user hovers over the smaller photo it appears on the main
-            photo section
-            <br />
-            - If a user hovers over a different photo it will change the main
-            photo
-            <br />
-            - JavaScript allowed me to have the last hovered over photo remain
-            in the main section, even if a user hovered over blank space <br />
-            <div class="linkContainer">
-              <a class="projectLink projectLinkToGithub" href="#"
-                >See in Github &rarr;</a
-              >
-              <a class="projectLink projectLinkToLive" href="#"
-                >See Live &rarr;</a
-              >
-            </div>
-          </span>
-        </div>
-      </div>
-    </section>
-
-    <section id="resumeSection" class="resumeSection">
-      <h3 class="resumeSectionTitle">Resume</h3>
-      <div class="resumeLinkContainer">
-        <a class="resumeLinkPDF" href="#">PDF</a>
-      </div>
-      <img class="resumeSVG" src="img/resume.svg" alt="#" />
-    </section>
-
-    <!--             -->
-    <!--CONTACT SECTION-->
-    <!--             -->
-
-    <section id="contactSection" class="contactSection">
-      <p>
-        I am a self taught developer with a Bachelor's Degree in Chemical
-        Engineering. I enjoy front end developement.
-      </p>
-      <!-- 
-        will have an about title section, a nav bar on top, a text block with a 
-        brief description on what I have been doing and want to do and a little section
-        that displays all of the languages I am comfortable with (HTML, CSS, JS)
-        
-        ?? How do I want to design the nav bar?? Would the circles still work??
-        
-      -->
-    </section>
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <script
-      defer
-      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
-    "
-    ></script>
-    <script src="script.js"></script>
+    <script src="scriptExperiment.js"></script>
   </body>
 </html>
