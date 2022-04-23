@@ -35,7 +35,10 @@
 // --------------------------
 // SMOOTH SCROLLINGH
 // --------------------------
-const allLinks = document.querySelectorAll("a:link");
+
+const allLinks = document.querySelectorAll("a.navButton");
+const workingLinks = document.getElementsByClassName("projectLink");
+// const allLinks = document.getElementsByClassName("navButton");
 
 allLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
@@ -54,7 +57,6 @@ allLinks.forEach(function (link) {
     }
   });
 });
-
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 
 // ------------------------------------------------------
@@ -83,18 +85,43 @@ const obs = new IntersectionObserver(
 
     if (ent.isIntersecting === false) {
       document.body.classList.add("sticky");
+      document;
+      // .querySelector(".allNavContainer")
+      // .classList.remove("allNavContainerWithAbsolutePositioning");
     }
 
     if (ent.isIntersecting === true) {
       document.body.classList.remove("sticky");
+      document;
+      // .querySelector(".allNavContainer")
+      // .classList.add("allNavContainerWithAbsolutePositioning");
     }
   },
   {
     // inside the viewport
     root: null,
     threshold: 0,
-    rootMargin: "-100px", //fire when the heroContainer is not in the viewport
+    rootMargin: "-90px", //fire when the heroContainer is not in the viewport
   }
 );
 
 obs.observe(sectionHeroEl);
+
+// FORM VALIDATION CODE
+const formInputName = document.querySelector(".nameInput");
+const formInputEmail = document.querySelector(".emailInput");
+const formInputMessageBody = document.querySelector(".messageBodyInput");
+const errorMessageDiv = document.querySelector(".errorMessageContainer");
+
+document
+  .querySelector(".contactMeForm")
+  .addEventListener("submit", function (e) {
+    let errorMessages = [];
+    if (formInputName.value === "" || formInputName.value === null) {
+      errorMessages.push("Please enter your name");
+    }
+    if (errorMessages.length > 0) {
+      e.preventDefault();
+      errorMessageDiv.innerText = errorMessages.join(", ");
+    }
+  });
